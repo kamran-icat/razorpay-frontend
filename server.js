@@ -3,7 +3,7 @@ const bodyParser = require ("body-parser");
 const cors = require("cors")
 const Razorpay= require("razorpay")
 const app = express();
-const port = 3000;
+const port = 5000;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
@@ -12,7 +12,7 @@ app.get("/", (req, res)=>{
   res.send("integration")
 })
 
-app.post('/oredrs',async(req, res)=>{
+app.post('/orders',async(req, res)=>{
   const razorpay = new Razorpay({
   key_id :"rzp_test_3Fr570cprLauMD",
   key_secret:"m96ZGfEeobappicb90uZnCPI"
